@@ -106,7 +106,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Custom\p0wnedShellLoggingBypass.cs" />
     <Compile Include="Modules\ADAttacks\p0wnedADAttacks.cs" />
     <Compile Include="Amsi\p0wnedAmsiBypass.cs" />
     <Compile Include="Modules\LateralMov\p0wnedMeter.cs" />
